@@ -4,7 +4,7 @@ import { Logo } from "../../components/logo";
 import { Button } from "../../components/Button";
 import { Marginer } from "../../components/marginer";
 import { DownArrow } from "../../components/downArrow";
-import { Element, scroller } from "react-scroll";
+import { Element } from "react-scroll";
 import { Link } from "react-scroll";
 
 import BackgroundImg from "../../assets/pictures/company_team.jpg";
@@ -15,6 +15,9 @@ const TopContainer = styled.div`
   height: 100vh;
   padding: 0;
   background-image: url(${BackgroundImg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
 `;
 
@@ -33,6 +36,7 @@ const MotivationalText = styled.h1`
   line-height: 1.5;
   color: #fff;
   margin: 0;
+  text-align: center;
 `;
 
 const DownArrowContainer = styled(Link)`
@@ -59,7 +63,7 @@ export function TopSection(props) {
           <MotivationalText>From the Best in the Industry</MotivationalText>
           <Marginer direction='verticle' margin='2em' />
           <Button>Start Your Project</Button>
-          <DownArrowContainer to='serviceSection' smooth={true} duration={1000}>
+          <DownArrowContainer to='serviceSection' smooth={true} duration={900}>
             <DownArrow />
           </DownArrowContainer>
         </BackgroundFilter>
